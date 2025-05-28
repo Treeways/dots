@@ -14,7 +14,8 @@
 	environment.systemPackages = with pkgs; [
 		# System
 		comma
-		mako
+		ripgrep
+		# mako
 		alacritty
 		fuzzel
 		xfce.thunar
@@ -22,7 +23,8 @@
 		xfce.thunar-archive-plugin
 		xfce.thunar-media-tags-plugin
 		# spacedrive
-		sayonara
+		# sayonara
+		rhythmbox
 		protonvpn-gui
 		qdirstat
 		brightnessctl
@@ -30,6 +32,7 @@
 		wpaperd
 		home-manager
 		git
+		lazygit
 		nixfmt-classic
 
 		# Apps

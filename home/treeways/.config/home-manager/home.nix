@@ -9,7 +9,7 @@
 
 	nixpkgs.config.allowUnfree = true;
 	home.packages = with pkgs; [
-		# Global aliases :)
+		# Global aliases between shells :)
 		(pkgs.writeShellScriptBin "q" "kill -9 $PPID")
 		(pkgs.writeShellScriptBin "mkcd" "mkdir \"$1\"; cd \"$1\";")
 		(pkgs.writeShellScriptBin "hrc" "vim ~/.config/home-manager/home.nix")
@@ -27,6 +27,24 @@
 		(pkgs.writeShellScriptBin "init-treeways" ''
 			git config user.name "Treeways"
 			git config user.email "56928485+Treeways@users.noreply.github.com"
+		'')
+
+		# Dots backup - add configs as needed
+		(pkgs.writeShellScriptBin "backup-dots" ''
+			DOTS_BACKUP_DIR="$HOME/Dev/dots"
+			DOTS_HOME_DIR="$DOTS_BACKUP_DIR/home/treeways/"
+			cp /etc/nixos/* "$DOTS_BACKUP_DIR/etc/nixos" -r
+			cp -r "$HOME/.config/home-manager" "$DOTS_HOME_DIR/.config/"
+			cp -r "$HOME/.config/alacritty" "$DOTS_HOME_DIR/.config/"
+			cp -r "$HOME/.config/niri" "$DOTS_HOME_DIR/.config/"
+			cp -r "$HOME/.config/waybar" "$DOTS_HOME_DIR/.config/"
+			cp -r "$HOME/.config/wpaperd" "$DOTS_HOME_DIR/.config/"
+
+			cd $DOTS_BACKUP_DIR
+			eval `ssh-agent -s`
+			ssh-add "$HOME/.ssh/id_rsa_treeway7"
+			git fetch && git add -A && git commit -m "Backup dots" && git push
+			ssh-agent -k
 		'')
 	];
 
