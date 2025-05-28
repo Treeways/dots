@@ -41,8 +41,7 @@
 			cp -r "$HOME/.config/wpaperd" "$DOTS_HOME_DIR/.config/"
 
 			cd $DOTS_BACKUP_DIR
-			eval `ssh-agent -s`
-			ssh-add "$HOME/.ssh/id_rsa_treeway7"
+			eval `ssh-agent -s` && ssh-add "$HOME/.ssh/id_rsa_treeway7"
 			git fetch && git add -A && git commit -m "Backup dots" && git push
 			ssh-agent -k
 		'')
