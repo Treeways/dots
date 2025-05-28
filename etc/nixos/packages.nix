@@ -19,9 +19,6 @@
 		alacritty
 		fuzzel
 		xfce.thunar
-		xfce.thunar-vcs-plugin
-		xfce.thunar-archive-plugin
-		xfce.thunar-media-tags-plugin
 		# spacedrive
 		# sayonara
 		rhythmbox
@@ -33,7 +30,6 @@
 		home-manager
 		git
 		lazygit
-		nixfmt-classic
 
 		# Apps
 		prismlauncher
@@ -44,9 +40,9 @@
 		marktext
 		vlc
 
-		# Optional
-		nwg-look
-		libsForQt5.qtstyleplugin-kvantum
+		# Ricing
+		# nwg-look
+		# libsForQt5.qtstyleplugin-kvantum
 	];
 
 	fonts.packages = with pkgs; [
@@ -61,4 +57,13 @@
 		defaultEditor = true;
 	};
 	programs.zsh.enable = true; 
+
+	programs.thunar = {
+		enable = true;
+		plugins = with pkgs.xfce; [
+			thunar-vcs-plugin
+			thunar-archive-plugin
+			thunar-media-tags-plugin
+		];
+	};
 }
