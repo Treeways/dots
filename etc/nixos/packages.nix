@@ -61,8 +61,9 @@
 	programs.thunar = {
 		enable = true;
 		plugins = with pkgs.xfce; [
+			thunar-volman
 			thunar-vcs-plugin
-			thunar-archive-plugin
+			thunar-archive-plugin # FIXME
 			thunar-media-tags-plugin
 		];
 	};
