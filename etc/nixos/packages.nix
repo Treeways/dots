@@ -12,34 +12,39 @@
 	};
 
 	environment.systemPackages = with pkgs; [
-		# System
-		comma
-		ripgrep
-		# mako
-		alacritty
-		fuzzel
-		xfce.thunar
-		# spacedrive
-		# sayonara
-		rhythmbox
-		protonvpn-gui
-		font-manager
-		qdirstat
+		# System utils
 		brightnessctl
+		fuzzel
 		waybar
 		wpaperd
 		home-manager
+		xwayland-satellite
+
+		# CLI
+		comma
+		ripgrep
+		alacritty
 		git
 		lazygit 
 		starship
 
+		# System apps
+		xfce.thunar
+		# spacedrive # Bug with onboarding
+		# sayonara # Can't load my library
+		rhythmbox # Sayonara has a better UX
+		font-manager
+		qdirstat
+
 		# Apps
+		unstable.protonvpn-gui
 		prismlauncher
-		gftp
+		filezilla
+		# gftp
 		vscode-fhs
 		legcord
 		cinny-desktop
-		marktext
+		marktext # No .desktop file for some reason
 		vlc
 
 		# Ricing
@@ -65,7 +70,7 @@
 		plugins = with pkgs.xfce; [
 			thunar-volman
 			thunar-vcs-plugin
-			thunar-archive-plugin # FIXME
+			thunar-archive-plugin # Doesn't show up for some reason
 			thunar-media-tags-plugin
 		];
 	};
