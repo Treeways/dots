@@ -23,13 +23,15 @@
 		# sayonara
 		rhythmbox
 		protonvpn-gui
+		font-manager
 		qdirstat
 		brightnessctl
 		waybar
 		wpaperd
 		home-manager
 		git
-		lazygit
+		lazygit 
+		starship
 
 		# Apps
 		prismlauncher
