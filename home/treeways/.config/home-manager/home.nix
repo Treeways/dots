@@ -67,7 +67,6 @@
 			enable = true;
 			highlighters = [
 				"brackets"
-				# "cursor"
 				"root"
 				"line"
 			];
@@ -77,7 +76,8 @@
 		enable = true;
 		enableZshIntegration = true;
 		# useTheme="honukai";
-		useTheme="nordtron";
+		# useTheme="nordtron";
+		useTheme="robbyrussell";
 	};
 	programs.carapace = {
 		enable = true;
