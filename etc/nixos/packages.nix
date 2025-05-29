@@ -33,6 +33,7 @@
 		# spacedrive # Bug with onboarding
 		# sayonara # Can't load my library
 		rhythmbox # Sayonara has a better UX
+		xarchiver
 		font-manager
 		qdirstat
 

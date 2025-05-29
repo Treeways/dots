@@ -127,6 +127,7 @@
 		"Kvantum/kvantum.kvconfig".text = "[General]\ntheme=ArcDark";
 	};
 
+	# Makes submenus too transparent to read, for some reason
 	# xdg.configFile = {
 	# 	"Kvantum/WhiteSur".source = "${pkgs.whitesur-kde}/share/Kvantum/WhiteSur";
 	# 	"Kvantum/kvantum.kvconfig".text = "[General]\ntheme=WhiteSur";
