@@ -126,5 +126,10 @@
 		"Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
 		"Kvantum/kvantum.kvconfig".text = "[General]\ntheme=ArcDark";
 	};
+
+	# xdg.configFile = {
+	# 	"Kvantum/WhiteSur".source = "${pkgs.whitesur-kde}/share/Kvantum/WhiteSur";
+	# 	"Kvantum/kvantum.kvconfig".text = "[General]\ntheme=WhiteSur";
+	# };
 }
 
