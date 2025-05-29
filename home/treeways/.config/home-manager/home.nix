@@ -34,6 +34,7 @@
 			DOTS_BACKUP_DIR="$HOME/Dev/dots"
 			DOTS_HOME_DIR="$DOTS_BACKUP_DIR/home/treeways/"
 			cp /etc/nixos/* "$DOTS_BACKUP_DIR/etc/nixos" -r
+			cp "$HOME/.bashrc" "$DOTS_HOME_DIR/"
 			cp -r "$HOME/.config/home-manager" "$DOTS_HOME_DIR/.config/"
 			cp -r "$HOME/.config/alacritty" "$DOTS_HOME_DIR/.config/"
 			cp -r "$HOME/.config/niri" "$DOTS_HOME_DIR/.config/"
