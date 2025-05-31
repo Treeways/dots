@@ -18,15 +18,16 @@
 		waybar
 		wpaperd
 		home-manager
-		xwayland-satellite
+		# xwayland-satellite
 
 		# CLI
-		comma
-		ripgrep
 		alacritty
+		starship
 		git
 		lazygit 
-		starship
+		unzip
+		comma
+		ripgrep
 
 		# System apps
 		xfce.thunar
@@ -40,6 +41,7 @@
 		# Apps
 		unstable.protonvpn-gui
 		prismlauncher
+		temurin-bin-17 # for Minecraft
 		filezilla
 		# gftp
 		vscode-fhs

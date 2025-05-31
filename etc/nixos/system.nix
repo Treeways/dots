@@ -26,7 +26,7 @@
 	services.displayManager.sddm = {
 		enable = true;
 		wayland.enable = true;
-		theme = "where_is_my_sddm_theme";
+		# theme = "where_is_my_sddm_theme";
 	};
 
 	environment.sessionVariables = {
@@ -34,7 +34,7 @@
 		NIXOS_OZONE_WL = "1";
 	};
 
-	# Niri
+	# WMs
 	programs.niri.enable = true;
 
 	security.polkit.enable = true;
@@ -52,6 +52,7 @@
 			defaultApplications = {
 				"image/png" = "firefox.desktop";
 				"inode/directory" = "thunar.desktop";
+				"application/zip" = "xarchiver.desktop";
 			};
 		};
 	};
