@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+	services.flatpak.enable = true;
+
 	# Allow unfree and unstable packages
 	nixpkgs.config = {
 		allowUnfree = true;
@@ -31,8 +33,8 @@
 
 		# System apps
 		xfce.thunar
-		# spacedrive # Bug with onboarding
 		# sayonara # Can't load my library
+		amberol
 		rhythmbox # Sayonara has a better UX
 		xarchiver
 		font-manager
