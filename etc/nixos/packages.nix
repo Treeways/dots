@@ -17,10 +17,11 @@
 		# System utils
 		brightnessctl
 		fuzzel
+		findex
 		waybar
 		wpaperd
 		home-manager
-		# xwayland-satellite
+		xwayland-satellite
 
 		# CLI
 		alacritty
@@ -39,6 +40,7 @@
 		xarchiver
 		font-manager
 		qdirstat
+		thunderbird
 
 		# Apps
 		unstable.protonvpn-gui
