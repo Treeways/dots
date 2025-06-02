@@ -5,6 +5,10 @@
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 
+	# Cachy kernel and Rustland scheduler (Nyx Chaotic)
+	boot.kernelPackages = pkgs.linuxPackages_cachyos;
+	services.scx.enable = true;
+
 	networking.hostName = "hyperlight";
 	networking.networkmanager.enable = true;
 
