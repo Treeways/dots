@@ -33,6 +33,10 @@
 		(pkgs.writeShellScriptBin "backup-dots" ''
 			DOTS_BACKUP_DIR="$HOME/Dev/dots"
 			DOTS_HOME_DIR="$DOTS_BACKUP_DIR/home/treeways/"
+
+			printf "\e[1;33mEnter commit name:\e[0m "
+			read COMMIT_NAME
+
 			rm -rf "$DOTS_BACKUP_DIR/*"
 			cp /etc/nixos/* "$DOTS_BACKUP_DIR/etc/nixos" -r
 			cp "$HOME/.bashrc" "$DOTS_HOME_DIR/"
@@ -44,7 +48,7 @@
 
 			cd $DOTS_BACKUP_DIR
 			eval `ssh-agent -s` && ssh-add "$HOME/.ssh/id_rsa_treeway7"
-			git fetch && git add -A && git commit -m "Backup dots" && git push
+			git fetch && git add -A && git commit -m "$COMMIT_NAME" && git push
 			ssh-agent -k
 		'')
 	];
