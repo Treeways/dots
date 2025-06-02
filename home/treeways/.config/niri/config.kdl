@@ -19,11 +19,12 @@ input {
     }
 }
 
-/-output "eDP-1" {
+output "eDP-1" {
     mode "3840x2160@60"
-    scale 2
-    transform "normal"
-    position x=1280 y=0
+    // mode "1920x1080"
+    // scale 
+    // transform "normal"
+    // position x=1280 y=0
 }
 
 layout {
@@ -99,7 +100,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Alt+Space { spawn "fuzzel"; }
     Mod+E { spawn "thunar"; }
-    Super+Alt+L { spawn "swaylock"; }
+    // Super+Alt+L { spawn "swaylock"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
@@ -108,6 +109,7 @@ binds {
     XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%+"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%-"; }
 
+    Ctrl+Space { toggle-overview; }
     Mod+Q { close-window; }
 
     Mod+Left  { focus-column-left; }

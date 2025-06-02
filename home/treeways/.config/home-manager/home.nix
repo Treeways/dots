@@ -11,7 +11,7 @@
 	home.packages = with pkgs; [
 		# Global aliases between shells :)
 		(pkgs.writeShellScriptBin "q" "kill -9 $PPID")
-		(pkgs.writeShellScriptBin "mkcd" "mkdir \"$1\"; cd \"$1\";")
+		(pkgs.writeShellScriptBin "mkcd" "mkdir -p \"$1\"; cd \"$1\";")
 		(pkgs.writeShellScriptBin "hrc" "vim ~/.config/home-manager/home.nix")
 		(pkgs.writeShellScriptBin "hsw" "home-manager switch")
 		(pkgs.writeShellScriptBin "nrc" "sudo vim /etc/nixos")
