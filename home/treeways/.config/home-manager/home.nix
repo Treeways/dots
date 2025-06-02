@@ -33,6 +33,7 @@
 		(pkgs.writeShellScriptBin "backup-dots" ''
 			DOTS_BACKUP_DIR="$HOME/Dev/dots"
 			DOTS_HOME_DIR="$DOTS_BACKUP_DIR/home/treeways/"
+			rm -rf "$DOTS_BACKUP_DIR/*"
 			cp /etc/nixos/* "$DOTS_BACKUP_DIR/etc/nixos" -r
 			cp "$HOME/.bashrc" "$DOTS_HOME_DIR/"
 			cp -r "$HOME/.config/home-manager" "$DOTS_HOME_DIR/.config/"

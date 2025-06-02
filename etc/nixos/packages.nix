@@ -4,14 +4,15 @@
 	services.flatpak.enable = true;
 
 	# Allow unfree and unstable packages
-	nixpkgs.config = {
-		allowUnfree = true;
-		packageOverrides = pkgs: {
-			unstable = import <nixos-unstable> {
-				config = config.nixpkgs.config;
-			};
-		};
-	};
+	# nixpkgs.config = {
+	# 	allowUnfree = true;
+	# 	packageOverrides = pkgs: {
+	# 		unstable = import <nixos-unstable> {
+	# 			config = config.nixpkgs.config;
+	# 		};
+	# 	};
+	# };
+	nixpkgs.config.allowUnfree = true;
 
 	environment.systemPackages = with pkgs; [
 		# System utils
@@ -43,7 +44,8 @@
 		thunderbird
 
 		# Apps
-		unstable.protonvpn-gui
+		# unstable.protonvpn-gui
+		protonvpn-gui
 		prismlauncher
 		temurin-bin-17 # for Minecraft
 		filezilla
@@ -62,7 +64,7 @@
 	fonts.packages = with pkgs; [
 		nerd-fonts._0xproto
 		inter
-		unstable.aporetic
+		aporetic
 	];
 
 	# Don't remove Vim or Zsh unless you know what you're doing.
